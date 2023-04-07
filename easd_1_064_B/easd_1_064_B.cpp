@@ -12,3 +12,8 @@ const int max = 64 + 20 - 2 * 15 + 10 + 20; // jumlah maksimum data
 int Dhafa[84];
 int temp[84];
 
+void merge(int low, int mid, int high) {
+    int i = low;
+    int MD = mid + 1;
+    int k = low;
+
