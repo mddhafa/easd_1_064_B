@@ -35,3 +35,10 @@ void merge(int low, int mid, int high) {
         k++;
     }
 
+    while (i <= mid) {
+        temp[k] = Dhafa[i];
+        i++;
+        k++;
+    }
+
+  
