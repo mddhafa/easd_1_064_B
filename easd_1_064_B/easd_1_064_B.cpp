@@ -44,3 +44,10 @@ void merge(int low, int mid, int high) {
         Dhafa[i] = temp[i];
     }
 }
+
+
+void mergeSort(int low, int high) {
+    if (low >= high) {
+        return;
+    }
+  
