@@ -75,7 +75,7 @@ void display() {
 
 int main() {
     input();
-    mergeSort(0, 98 - 1);
+    mergeSort(0, 84 - 1);
     display();
     return 0;
 }
