@@ -28,3 +28,9 @@ void merge(int low, int mid, int high) {
         }
         k++;
     }
+
+    while (MD <= high) {
+        temp[k] = Dhafa[MD];
+        MD++;
+        k++;
+    }
