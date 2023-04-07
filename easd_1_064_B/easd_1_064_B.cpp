@@ -64,3 +64,11 @@ void input() {
         cin >> Dhafa[i];
     }
 }
+
+void display() {
+    cout << "Hasil Pengurutan: " << endl;
+    for (int i = 0; i < 84; i++) {
+        cout << Dhafa[i] << " ";
+    }
+    cout << endl;
+}
