@@ -17,3 +17,14 @@ void merge(int low, int mid, int high) {
     int MD = mid + 1;
     int k = low;
 
+    while (i <= mid && MD <= high) {
+        if (Dhafa[i] <= Dhafa[MD]) {
+            temp[k] = Dhafa[i];
+            i++;
+        }
+        else {
+            temp[k] = Dhafa[MD];
+            MD++;
+        }
+        k++;
+    }
