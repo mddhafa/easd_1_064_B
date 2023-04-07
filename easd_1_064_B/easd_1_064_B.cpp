@@ -57,4 +57,10 @@ void mergeSort(int low, int high) {
 
 
 
+void input() {
+    cout << "Masukkan " << 84 << " data:" << endl;
+    for (int i = 0; i < 84; i++) {
+        cin >> Dhafa[i];
+    }
+}
 
