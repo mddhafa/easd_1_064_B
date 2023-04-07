@@ -72,3 +72,9 @@ void display() {
     cout << endl;
 }
 
+int main() {
+    input();
+    mergeSort(0, 98 - 1);
+    display();
+    return 0;
+}
