@@ -3,3 +3,78 @@
 //sepeed of the machine, complier, operating system, programming language, size of the input
 //quicksort
 //bubble sort, insertion sort, selesction sort merupakan (quadratic), Quick sort, marge sort, shell sort (logliner)
+
+#include <iostream>;
+using namespace std;
+ 
+const int max = 64 + 20 - 2 * 15 + 10 + 20; // jumlah maksimum data
+
+int Dhafa[84];
+int temp[84];
+
+void merge(int low, int mid, int high) {
+    int i = low;
+    int AR = mid + 1;
+    int k = low;
+
+    while (i <= mid && AR <= high) {
+        if (Dhafa[i] <= Dhafa[AR]) {
+            temp[k] = Dhafa[i];
+            i++;
+        }
+        else {
+            temp[k] = Dhafa[AR];
+            AR++;
+        }
+        k++;
+    }
+
+    while (AR <= high) {
+        temp[k] = Dhafa[AR];
+        AR++;
+        k++;
+    }
+
+    while (i <= mid) {
+        temp[k] = Dhafa[i];
+        i++;
+        k++;
+    }
+
+    for (int i = low; i <= high; i++) {
+        Dhafa[i] = temp[i];
+    }
+}
+
+void mergeSort(int low, int high) {
+    if (low >= high) {
+        return;
+    }
+
+    int mid = (low + high) / 2;
+    mergeSort(low, mid);
+    mergeSort(mid + 1, high);
+    merge(low, mid, high);
+}
+
+void input() {
+    cout << "Masukkan " << 84 << " data:" << endl;
+    for (int i = 0; i < 84; i++) {
+        cin >> Dhafa[i];
+    }
+}
+
+void display() {
+    cout << "Hasil Pengurutan: " << endl;
+    for (int i = 0; i < 84; i++) {
+        cout << Dhafa[i] << " ";
+    }
+    cout << endl;
+}
+
+int main() {
+    input();
+    mergeSort(0, 84 - 1);
+    display();
+    return 0;
+}
